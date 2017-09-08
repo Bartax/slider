@@ -1,0 +1,120 @@
+//external files:
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700)
+
+//mixins
+@mixin flex
+    display: -webkit-box  
+    display: -ms-flexbox
+    display: -webkit-flex
+    display: flex
+    flex-wrap: wrap
+    
+.wrapper
+    @include flex
+    align-items: center
+    flex-direction: column
+    width: 100%
+    position: relative
+    
+    .slider-container
+        @include flex
+        justify-content: center
+        width: 60%
+        height: 400px
+        margin: 20px
+        padding: 50px
+        border-radius: 15px
+        position: relative
+        filter: sepia(0)
+        
+        &:hover    
+            filter: sepia(30%)
+        
+        .slide.active
+            opacity: 1
+        
+        .slide
+            position: absolute
+            top: 0
+            right: 0
+            bottom: 0
+            left: 0
+            opacity: 0
+            background-size: 100% 100%
+            background-position: center
+            border-radius: 15px
+            transition: all, 1s
+        
+        .slide-one
+            background-image: url('../images/image1.jpg')
+               
+        .slide-two
+            background-image: url('../images/image2.jpg')
+            
+        .slide-three
+            background-image: url('../images/image3.jpg') 
+            
+        .slide-four
+            background-image: url('../images/image4.jpg') 
+            
+        .slide-five
+            background-image: url('../images/image5.jpg')    
+            
+        
+    .control-container
+        @include flex
+        flex-direction: row
+        justify-content: space-around
+        margin: 20px
+        padding: 15px
+        width: 40%
+        border: 2px solid black
+        border-radius: 15px
+        position: relative
+        
+        .controller.active
+            background-color: gold
+        
+        .controller
+            width: 30px
+            height: 30px
+            background-color: lightblue
+            border: 2px solid black
+            border-radius: 100px
+            transition: 5s, all
+            
+            &:hover
+                cursor: pointer
+                border: none
+        
+        .play-stop
+            font-size: 25px
+            cursor: pointer
+            
+            &:hover
+                color: #004
+                transform: scale(1.2)
+                        
+@media only screen and (max-width: 768px)
+    
+    .wrapper
+        width: 100%
+        
+        h1
+            font-size: 20px
+        
+        .slider-container
+            height: 200px
+            width: 80%
+        
+        .control-container
+            width: 80%
+            
+            .controller
+                width: 20px
+                height: 20px
+                
+            .play-stop
+                font-size: 20px    
+            
+            

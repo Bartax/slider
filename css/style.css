@@ -1,0 +1,100 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  position: relative; }
+  .wrapper .slider-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 60%;
+    height: 400px;
+    margin: 20px;
+    padding: 50px;
+    border-radius: 15px;
+    position: relative;
+    filter: sepia(0); }
+    .wrapper .slider-container:hover {
+      filter: sepia(30%); }
+    .wrapper .slider-container .slide.active {
+      opacity: 1; }
+    .wrapper .slider-container .slide {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      opacity: 0;
+      background-size: 100% 100%;
+      background-position: center;
+      border-radius: 15px;
+      transition: all, 1s; }
+    .wrapper .slider-container .slide-one {
+      background-image: url("../images/image1.jpg"); }
+    .wrapper .slider-container .slide-two {
+      background-image: url("../images/image2.jpg"); }
+    .wrapper .slider-container .slide-three {
+      background-image: url("../images/image3.jpg"); }
+    .wrapper .slider-container .slide-four {
+      background-image: url("../images/image4.jpg"); }
+    .wrapper .slider-container .slide-five {
+      background-image: url("../images/image5.jpg"); }
+  .wrapper .control-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 20px;
+    padding: 15px;
+    width: 40%;
+    border: 2px solid black;
+    border-radius: 15px;
+    position: relative; }
+    .wrapper .control-container .controller.active {
+      background-color: gold; }
+    .wrapper .control-container .controller {
+      width: 30px;
+      height: 30px;
+      background-color: lightblue;
+      border: 2px solid black;
+      border-radius: 100px;
+      transition: 5s, all; }
+      .wrapper .control-container .controller:hover {
+        cursor: pointer;
+        border: none; }
+    .wrapper .control-container .play-stop {
+      font-size: 25px;
+      cursor: pointer; }
+      .wrapper .control-container .play-stop:hover {
+        color: #004;
+        transform: scale(1.2); }
+
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    width: 100%; }
+    .wrapper h1 {
+      font-size: 20px; }
+    .wrapper .slider-container {
+      height: 200px;
+      width: 80%; }
+    .wrapper .control-container {
+      width: 80%; }
+      .wrapper .control-container .controller {
+        width: 20px;
+        height: 20px; }
+      .wrapper .control-container .play-stop {
+        font-size: 20px; } }
+
+/*# sourceMappingURL=style.css.map */
